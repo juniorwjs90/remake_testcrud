@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 @Service
 @AllArgsConstructor
 public class AlunoService {
-
     private final AlunoRepository repository;
 
     public Aluno salvarAluno(Aluno alunoParaSalvar){
-        return repository.save(alunoParaSalvar);
+       return repository.save(alunoParaSalvar);
     }
+
 }

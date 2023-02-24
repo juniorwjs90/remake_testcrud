@@ -11,12 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/aluno")
 @AllArgsConstructor
+
 public class AlunoController {
-
     private final AlunoService service;
-
     @PostMapping
-    public Aluno salvar(@RequestBody Aluno novoAluno){
-        return service.salvarAluno(novoAluno);
+    public Aluno alunoParaSalvar(@RequestBody Aluno salvarAluno){
+        return service.salvarAluno(salvarAluno);
     }
 }

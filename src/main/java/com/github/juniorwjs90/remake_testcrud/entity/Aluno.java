@@ -1,8 +1,12 @@
 package com.github.juniorwjs90.remake_testcrud.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.boot.autoconfigure.web.WebProperties;
 
 @Entity
 @Getter
@@ -11,9 +15,9 @@ public class Aluno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String data_nascimento;
+    private Long matricula;
+    private String nome;
     private String email;
-    private String matricula;
-    private String name;
+    private String data_nascimento;
 
 }
